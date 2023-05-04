@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class Pattern1 {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size : ");
+        int num=sc.nextInt();
+        m1(num);      
+    }
+    public static void m1(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if( (i==0 && j<=3*n/4) || (i==3*n/4 && j<=3*n/4) || (j==(n-3)/2 && i< 3*n/4))
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }           
+            } 
+            for(int j=0;j<n;j++)
+            {
+                if((j==0 && i<=3*n/4)||(j==3*n/4 && i<=3*n/4) || (i==j && i!=0 && i<=3*n/4))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            for(int j=0;j<n;j++)
+            {
+                if((i==0 && j<=3*n/4)|| (j==0 && i<=3*n/4) || (i==3*n/4 && j<=3*n/4) || (i==(3*n/4)/2 && j<=3*n/4))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            for(int j=0;j<n;j++)
+            {
+                if((j==0 && i<3*n/4)|| (j==3*n/4 && i < 3*n/4)|| (i==3*n/4 && j!=0 && j<3*n/4))
+                    System.out.print("*");
+                else 
+                    System.out.print(" ");
+            }
+            for(int j=0;j<n;j++)
+            {
+                if((j==0 && i <=3*n/4) || (i==0 && j < 3*n/4)|| (i==(3*n/4)/2 && j<3*n/4) || (j==3*n/4 && i!=0 && i<(3*n/4)/2)||(i==j&& i> (3*n/4)/2 && j> (3*n/4)/2 && i<=3*n/4 && j<=3*n/4))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            for(int j=0;j<n;j++)
+            {
+                if( (j==0 && i!=0 && i<3*n/4) || (j==3*n/4 && i!=0 && i<3*n/4) || (i==0 && j!=0 &&j <3*n/4)|| (i==3*n/4 && j!=0 && j<3*n/4))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            for(int j=0;j<n;j++)
+            {
+                if((j==0 && i<=3*n/4)||(j==3*n/4 && i<=3*n/4) || (i==j && i!=0 && i<=3*n/4))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
